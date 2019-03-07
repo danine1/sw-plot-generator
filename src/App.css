@@ -6,6 +6,7 @@
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  font-family: "Anton", sans-serif;
 }
 
 .App-logo {
@@ -27,6 +28,19 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.jumbotron {
+  margin-top: 0px;
+  margin-bottom: 2rem;
+  background-color: black;
+  border-radius: 0rem;
+  color: white;
+  font-size: 2em;
+}
+
+.peopleList {
+  list-style: none;
 }
 
 @keyframes App-logo-spin {

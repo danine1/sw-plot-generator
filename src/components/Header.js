@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Header = props => {
   const { branding } = props;
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
       <div className="container">
         <a href="/" className="navbar-brand">
           {branding}
@@ -12,7 +12,7 @@ const Header = props => {
         <div>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <a href="" className="nav-link">
+              <a href="/" className="nav-link">
                 Home
               </a>
             </li>
