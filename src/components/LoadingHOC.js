@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import spinner from "../assets/images/spinner.gif";
 
 const LoadingHOC = WrappedState => {
   return class LoadingHOC extends Component {
     render() {
       return this.props.peoplenames.length === 0 ? (
-        <img className="isLoading" />
+        <img className="isLoading" src={spinner} alt="spinner" />
       ) : (
         <WrappedState {...this.props} />
       );

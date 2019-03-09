@@ -6,6 +6,7 @@ import axios from "axios";
 
 import SearchPeople from "./components/SearchPeople";
 import ListPeople from "./components/ListPeople";
+import StoryInfo from "./components/StoryInfo";
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class App extends Component {
       .then(json =>
         json.data.results.map(result => ({
           name: `${result.name}`,
-          id: result
+          id: result.id
         }))
       )
       .then(newData => this.setState({ people: newData, store: newData }))
@@ -44,9 +45,17 @@ class App extends Component {
     return (
       <div className="App">
         <Header branding="Star Wars App" />
-        <div className="jumbotron">Start Your adventure</div>
-        <SearchPeople searchFunc={e => this.filterNames(e)} />
-        <ListPeople peoplenames={people} />
+        <div className="jumbotron">Start Your Intergalactic adventure</div>
+        <StoryInfo />
+        <div className="row">
+          <div className="col-md-6">
+            <SearchPeople searchFunc={e => this.filterNames(e)} />
+            <ListPeople peoplenames={people} />
+          </div>
+          <div className="col-md-6">
+            <SearchPeople searchFunc={e => this.filterNames(e)} />
+          </div>
+        </div>
       </div>
     );
   }

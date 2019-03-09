@@ -6,7 +6,7 @@ const SearchPeople = props => {
       <input
         className="searchPeople"
         type="text"
-        placeholder="search people"
+        placeholder="Find a Comrade"
         onChange={props.searchFunc}
       />
     </div>
