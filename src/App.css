@@ -45,6 +45,10 @@
   margin-left: -50px;
 }
 
+.plotDetails {
+  color: white;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
