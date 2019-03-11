@@ -5,8 +5,8 @@ const ListPeople = props => {
   const { peoplenames } = props;
   return (
     <ul>
-      {peoplenames.map(person => (
-        <li className="peopleList" key={person.id}>
+      {peoplenames.map((person, i) => (
+        <li className="peopleList" key={i}>
           {person.name}
         </li>
       ))}

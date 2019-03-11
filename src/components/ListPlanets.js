@@ -5,8 +5,8 @@ const ListPlanets = props => {
   const { planetnames } = props;
   return (
     <ul>
-      {planetnames.map(planet => (
-        <li className="peopleList" key={planet.id}>
+      {planetnames.map((planet, i) => (
+        <li className="peopleList" key={i}>
           {planet.name}
         </li>
       ))}
