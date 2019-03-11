@@ -47,3 +47,7 @@
   content: "\f00c";
   font-family: FontAwesome;
 }
+
+p {
+  color: white;
+}
