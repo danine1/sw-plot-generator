@@ -18,7 +18,8 @@ class App extends Component {
     this.state = {
       planets: [],
       people: [],
-      store: []
+      storepeople: [],
+      storeplanets: []
     };
   }
 
@@ -31,7 +32,9 @@ class App extends Component {
           id: result.id
         }))
       )
-      .then(newData => this.setState({ people: newData, store: newData }));
+      .then(newData =>
+        this.setState({ people: newData, storepeople: newData })
+      );
     return axios
       .get("https://swapi.co/api/planets")
       .then(json =>
@@ -40,13 +43,15 @@ class App extends Component {
           id: result.name.id
         }))
       )
-      .then(newData => this.setState({ planets: newData, store: newData }))
+      .then(newData2 =>
+        this.setState({ planets: newData2, storeplanets: newData2 })
+      )
       .catch(error => alert(error));
   }
 
   filterNames(e) {
     this.setState({
-      people: this.state.store.filter(item =>
+      people: this.state.storepeople.filter(item =>
         item.name.toLowerCase().includes(e.target.value.toLowerCase())
       )
     });
@@ -54,7 +59,7 @@ class App extends Component {
 
   filterPlanets(e) {
     this.setState({
-      planets: this.state.store.filter(item =>
+      planets: this.state.storeplanets.filter(item =>
         item.name.toLowerCase().includes(e.target.value.toLowerCase())
       )
     });

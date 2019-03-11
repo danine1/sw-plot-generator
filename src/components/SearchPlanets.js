@@ -1,16 +1,37 @@
-import React from "react";
+import React, { Component } from "react";
 
-const SearchPlanets = props => {
-  return (
-    <div>
-      <input
-        className="searchPlanets"
-        type="text"
-        placeholder="Where in the Galaxy?"
-        onChange={props.searchFunc}
-      />
-    </div>
-  );
-};
+class SearchPeople extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      planet: ""
+    };
+  }
 
-export default SearchPlanets;
+  handlePlanetSubmit = event => {
+    event.preventDefault();
+    const data = this.state;
+    console.log(data);
+  };
+
+  render() {
+    const { planet } = this.state;
+    return (
+      <div>
+        <p>World: {planet}</p>
+        <form onSubmit={this.handlePlanetSubmit}>
+          <input
+            className="searchPlanet"
+            type="text"
+            name="planet"
+            placeholder="Where in the Galaxy?"
+            onChange={this.props.searchFunc}
+          />
+          <button>Add World</button>
+        </form>
+      </div>
+    );
+  }
+}
+
+export default SearchPeople;
