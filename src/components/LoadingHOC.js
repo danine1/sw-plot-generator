@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import spinner from "../assets/images/spinner.gif";
+import spinner from "../assets/images/lightsaber.gif";
 
 const LoadingHOC = WrappedState => {
   return class LoadingHOC extends Component {

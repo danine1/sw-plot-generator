@@ -4,11 +4,11 @@ class DisplayPlot extends Component {
   render() {
     return (
       <div className="plotDetails">
-        <h1>Your Mission:</h1>
-        <p>Mission Name: {this.props.title}</p>
+        <h1>Good Luck</h1>
+        {/* <p>Mission Name: {this.props.title}</p>
         <p>Mission Objective: {this.props.description}</p>
         <p>Comrade: {this.props.people}</p>
-        <p>Target World: {this.props.planets}</p>
+        <p>Target World: {this.props.planets}</p> */}
       </div>
     );
   }

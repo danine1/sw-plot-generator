@@ -2,32 +2,11 @@
   text-align: center;
   background-image: url("./assets/images/sw-background.jpg"); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
-  height: 1200px; /* You must set a specified height */
+  height: 1000px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   font-family: "Anton", sans-serif;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .jumbotron {
@@ -49,11 +28,22 @@
   color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.isLoading {
+  width: 235px;
+}
+
+.blackButton {
+  background-color: none;
+  color: black;
+}
+
+.whiteButton {
+  background-color: green;
+  color: white;
+  border: 1px solid green;
+}
+
+.whiteButton:after {
+  content: "\f00c";
+  font-family: FontAwesome;
 }

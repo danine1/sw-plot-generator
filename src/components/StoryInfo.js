@@ -5,9 +5,15 @@ class StoryInfo extends Component {
     super(props);
     this.state = {
       title: "",
-      description: ""
+      description: "",
+      black: true
     };
   }
+
+  changeColor() {
+    this.setState({ black: !this.state.black });
+  }
+
   handleSubmit = event => {
     event.preventDefault();
     const data = this.state;
@@ -26,6 +32,7 @@ class StoryInfo extends Component {
 
   render() {
     const { title, description } = this.state;
+    let btn_class = this.state.black ? "blackButton" : "whiteButton";
     return (
       <div>
         <p>Mission Name: {title}</p>
@@ -48,7 +55,9 @@ class StoryInfo extends Component {
             />
           </p>
           <p>
-            <button>Add Mission Details</button>
+            <button className={btn_class} onClick={this.changeColor.bind(this)}>
+              Add Mission Details
+            </button>
           </p>
         </form>
       </div>
