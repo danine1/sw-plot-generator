@@ -23,12 +23,15 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://swapi.co/api/people").then(json =>
-      json.data.results.map(result => ({
-        name: `${result.name}`,
-        id: result.id
-      }))
-    );
+    axios
+      .get("https://swapi.co/api/people")
+      .then(json =>
+        json.data.results.map(result => ({
+          name: `${result.name}`,
+          id: result.id
+        }))
+      )
+      .then(newData => this.setState({ people: newData, store: newData }));
     return axios
       .get("https://swapi.co/api/planets")
       .then(json =>
@@ -37,9 +40,7 @@ class App extends Component {
           id: result.name.id
         }))
       )
-      .then(newData =>
-        this.setState({ people: newData, planets: newData, store: newData })
-      )
+      .then(newData => this.setState({ planets: newData, store: newData }))
       .catch(error => alert(error));
   }
 

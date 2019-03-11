@@ -28,7 +28,6 @@ class StoryInfo extends Component {
     const { title, description } = this.state;
     return (
       <div>
-        <h1>Name Your Adventure</h1>
         <p>Mission Name: {title}</p>
         <form onSubmit={this.handleSubmit}>
           <p>
