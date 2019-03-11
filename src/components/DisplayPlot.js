@@ -4,7 +4,7 @@ class DisplayPlot extends Component {
   render() {
     return (
       <div className="plotDetails">
-        <h1>Good Luck</h1>
+        <h1>Go Forth and Conquer.</h1>
         {/* <p>Mission Name: {this.props.title}</p>
         <p>Mission Objective: {this.props.description}</p>
         <p>Comrade: {this.props.people}</p>
